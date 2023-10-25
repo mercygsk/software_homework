@@ -35,9 +35,9 @@ class Hamster{
 }
 
     ham = new Hamster();
-    ham.wheelRun();
-    ham.eatFood();
-    console.log(ham.getPrice());
+    // ham.wheelRun();
+    // ham.eatFood();
+    // console.log(ham.getPrice());
     console.log('/////////////////////////////////////////////////////////////////////');
 
 //////////////////////////////////////////////////////////////////////////////
@@ -115,49 +115,63 @@ class Person {
 }
 
 const timmy = new Person("Timmy");
-console.log(timmy);
+//console.log(timmy);
+console.log(`My name is ${timmy.getName()}. I'm a baby.`);
 
 for( let i=0; i<5; i++){
     timmy.ageUp();
 }
-console.log(timmy);
+//console.log(timmy);
+console.log(`\nNow I'm ${timmy.getAge()} years old. having mood swings ${timmy.mood} units, weight ${timmy.getWeight()} lbs, height ${timmy.height} units and my bank balance ${timmy.bankAccount} from my birthday money.`);
+
 
 for( let i=0; i<5; i++){
     timmy.eat();
 }
-console.log(timmy);
+//console.log(timmy);
+console.log(
+    `\nI'm so pampered and I ate 5 times, gained weight ${timmy.getWeight()} lbs.`);
 
 for( let i=0; i<5; i++){
     timmy.exercise();
 }
-console.log(timmy);
+//console.log(timmy);
+console.log(
+    `\nMy kindergarten is coming up, and I want to look good, so I exercises 5 times and lost 5 weight lbs and now I'm ${timmy.getWeight()} weight lbs.`);
 
-for( let i=0; i<4; i++){
+for( let i=0; i<9; i++){
     timmy.ageUp()
 }
-console.log(timmy);
+//console.log(timmy);
+console.log(`\nNow I'm ${timmy.getAge()} years old. having mood swings ${timmy.mood} units, weight ${timmy.getWeight()} lbs, height ${timmy.height} units and my bank balance ${timmy.bankAccount} from my birth day money.`);
 
 const gus = new Hamster("Gus");
-console.log(gus);
+//console.log(gus);
 gus.setOwner("Timmy");
-console.log(gus);
+//console.log(gus);
+console.log(`\nI want to buy a pet hamster with my birthday money ${timmy.bankAccount}, name my new pet as ${gus.name}.`);
 timmy.buyHamster(gus);
-console.log(timmy);
+//console.log(timmy);
+console.log(`\nI bought new pet hamster ${gus.name}. It accepted ${timmy.getName()} as its new owner`);
 
-for( let i=0; i<6; i++){
+for( let i=0; i<15; i++){
     timmy.ageUp();
 }
-console.log(timmy);
+//console.log(timmy);
 
 for( let i=0; i<2; i++){
     timmy.eat()
 }
-console.log(timmy);
+//console.log(timmy);
 
 for( let i=0; i<2; i++){
     timmy.exercise()
 }
-console.log(timmy);
+//console.log(timmy);
+console.log(
+    `\nAfter 15 years, my age is ${timmy.getAge()}, now I'm an adult with a mood of ${timmy.mood} units. ` +
+    `healthy and excercise daily with a weight of ${timmy.getWeight()}.`
+  );
 
 console.log("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////")
 
