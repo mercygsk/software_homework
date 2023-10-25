@@ -182,10 +182,10 @@ class Chef{
     }
 }
 
-// const chef = new Chef('Mercy');
-// console.log(chef);
-// chef.makeDinner('Chicken Nuggets','Noodles','Cake');
-// chef.makeDinner('Dynamite Shrimp','Fried Rice','Drink');
-// chef.makeDinner('Fried Fish','Chow Mein','Icecream');
-// console.log(chef);
-// console.log(chef.findDinner(0));
+const chef = new Chef('Mercy');
+console.log(chef);
+chef.makeDinner('Chicken Nuggets','Noodles','Cake');
+chef.makeDinner('Dynamite Shrimp','Fried Rice','Drink');
+chef.makeDinner('Fried Fish','Chow Mein','Icecream');
+console.log(chef);
+console.log(chef.findDinner(0));
