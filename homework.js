@@ -12,7 +12,7 @@ getPrice() - return the price*/
 
 class Hamster{
       constructor(owner, name, price){
-        this.owner = "";
+        this.owner = '';
         this.name = name;
         this.price = 15;
       }
@@ -20,30 +20,27 @@ class Hamster{
         console.log("squeak squeak");
       }
       eatFood(){
-        return "nibble nibble";
-        //console.log("nibble nibble");
+        console.log("nibble nibble");
     }
     getPrice(){
         return this.price;
-        //console.log(this.price);
+        
     }
-
-    setName(name) {
-        this.name = name;
-    }
-
-    setOwner(owner) {
+    setOwner(owner){
         this.owner = owner;
+    }
+    setName(name){
+        this.name = name;
     }
 }
 
-h = new Hamster();
- //console.log(h.wheelRun());
- h.wheelRun();
-// console.log(h.eatFood());
-// console.log(h.getPrice());
+    ham = new Hamster();
+    ham.wheelRun();
+    ham.eatFood();
+    console.log(ham.getPrice());
+    console.log('/////////////////////////////////////////////////////////////////////');
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 
 /*Person
 attributes:
@@ -89,66 +86,45 @@ class Person {
     greet(){
         return `Good morning ${this.name}`;
     }
-    eat(weight,mood) {
-        
-         this.weight = this.weight + weight;
-         this.mood = this.mood + mood;
-         
+    eat() {
+         this.weight++;
+         this.mood++;
     }
-    exercise(weight){
-        this.weight = this.weight - weight;
-        return this.weight;
+    exercise(){
+        this.weight--;
     }
     ageUp(age,height,weight,mood,bankAccount){
-        this.age = age+1;
-        this.height= height+1;
-        this.weight = weight+1;
-        this.mood = mood-1;
-        this.bankAccount = bankAccount+10;
+        this.age++;
+        this.height++;
+        this.weight++;
+        this.mood--;
+        this.bankAccount = this.bankAccount + 10;
     }
 
-    buyHamster(h){
-        this.hamsters.push(h);
-        this.eat(5,10);
-        this.bankAccount = this.bankAccount - h.getPrice();
-
+    buyHamster(hamster){
+        this.hamsters.push(hamster);
+        this.mood = +10;
+        this.bankAccount -= hamster.getPrice();
     }
-
-    setName(name) {
-        this.name= name;
-    }
-
-    setAge(age) {
-        this.age = age;
-    }
-
-
 }
-
-const p= new Person();
-
-console.log(p.getName());
-console.log(p.getAge());
-console.log(p.getWeight());
-console.log(p.greet());
-p.eat(10,3)
-console.log(" decrement in weight =  " + p.weight);
-console.log(p.exercise(10));
-p.ageUp(5,2,8,3,10);
-console.log(p);
-console.log(h);
-p.buyHamster(h);
-console.log(p);
-console.log(h);
 
 const Timmy = new Person("Timmy");
 console.log(Timmy);
-Timmy.setAge(5);
-Timmy.eat(15,5);
+for( let i=0; i<5; i++){
+    Timmy.ageUp();
+}
 console.log(Timmy);
-Timmy.exercise(5);
+for( let i=0; i<5; i++){
+    Timmy.eat();
+}
 console.log(Timmy);
-Timmy.setAge(9);
+for( let i=0; i<5; i++){
+    Timmy.exercise();
+}
+console.log(Timmy);
+for( let i=0; i<4; i++){
+    Timmy.ageUp()
+}
 console.log(Timmy);
 const gus = new Hamster();
 gus.setName("Gus");
@@ -156,12 +132,19 @@ gus.setOwner("Timmy");
 console.log(gus);
 Timmy.buyHamster(gus);
 console.log(Timmy);
-Timmy.setAge(15);
+for( let i=0; i<6; i++){
+    Timmy.ageUp();
+}
 console.log(Timmy);
-Timmy.eat(2,2);
+for( let i=0; i<2; i++){
+    Timmy.eat()
+}
 console.log(Timmy);
-Timmy.exercise(2);
+for( let i=0; i<2; i++){
+    Timmy.exercise()
+}
 console.log(Timmy);
+
 console.log("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////")
 
 class Dinner{
@@ -170,6 +153,7 @@ class Dinner{
     this.entree =  entree;
     this.dessert = dessert;
     }
+    //const dinner = new Dinner();
 }
 class Chef{
     constructor(chef){
@@ -177,20 +161,18 @@ class Chef{
         this.dinners = [];
     }
     makeDinner(appetizer, entree, dessert){
-        const dinner = new Dinner(appetizer, entree, dessert);
+        const dinner = new Dinner(appetizer, entree, dessert); // created a variable 
         this.dinners.push(dinner);
     }
-    findDinner (index){
+    findDinner(index){
        return this.dinners[index];
     }
-
 }
 
-const Chef1 = new Chef('john');
-console.log(Chef1);
-Chef1.makeDinner('chicken nuggets','noodles','cake');
-Chef1.makeDinner('chicken strips','rice','drink');
-Chef1.makeDinner('Fish nuggets','chips','choco');
-console.log(Chef1);
-console.log(Chef1.findDinner(0));
-
+const chef = new Chef('Mercy');
+console.log(chef);
+chef.makeDinner('Chicken Nuggets','Noodles','Cake');
+chef.makeDinner('Dynamite Shrimp','Fried Rice','Drink');
+chef.makeDinner('Fried Fish','Chow Mein','Icecream');
+console.log(chef);
+console.log(chef.findDinner(0));
